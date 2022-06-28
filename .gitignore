@@ -1,0 +1,17 @@
+# eclipse project files
+.settings/
+.classpath
+.project
+bin/
+
+# IntelliJ project files
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# Maven
+target/
+
+# Log files
+*.log
