@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.training.spring.configurationAutowired.TrainingAutowiredBean;
 import com.training.spring.configurationSpring.configuration.TrainingBeanConfiguration;
 import com.training.spring.configurationSpring.service.TrainingService;
 
@@ -26,6 +27,8 @@ public class Application {
 		TrainingService trainingServiceMulti2 = context.getBean("trainingServicePerRequest", TrainingService.class);
 		logger.error("Multi service 2 is " + trainingServiceMulti2.toString());
         //SpringApplication.run(Application.class, args);
+		TrainingAutowiredBean trainingAutowiredBean = context.getBean(TrainingAutowiredBean.class);
+		logger.error("Training autowired bean is " + trainingAutowiredBean.toString());
     }
 
 }
